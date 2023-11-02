@@ -1,7 +1,7 @@
 export const CarsListItem = () => {
   return (
       <>
-          <p>I am CarListItem</p>
+          <p>I am CarListItems</p>
       </>
   );
 };
