@@ -31,7 +31,7 @@ const Catalog = () => {
    }
 
    if (!initialLoad) {
-     dispatch(fetchCars({ page, limit: 8 }));
+     dispatch(fetchCars({ page, limit: 12 }));
    } else {
      setInitialLoad(false); 
    }
