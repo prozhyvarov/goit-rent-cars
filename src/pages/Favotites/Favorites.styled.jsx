@@ -50,3 +50,26 @@ export const NavLink = styled(Link)`
     transform: scale(1.1);
   }
 `;
+
+export const DeleteBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:20px auto;
+  padding: 8px;
+  width: 260px;
+  border: solid 1px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #fba003;
+  transition: all 250ms;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #000000;
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+`;

@@ -12,6 +12,18 @@ export const Item = styled.li`
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 `;
+
+export const Text = styled.p`
+margin:0px;
+height:24px;
+  font-family: Manrope;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+`;
+
 export const ImageThumb = styled.div`
   height: 268px;
   border-radius: 14px;
@@ -28,21 +40,25 @@ export const Paragraf = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
-  margin: 20px 0;
+  margin-top:14px;
+  margin-bottom:8px;
 `;
 
 export const Span = styled.span`
   color: #3470ff;
+  margin: 0px;
+  height: 24px;
   font-family: Manrope;
-  font-size: 18px;
-  font-style: normal;
+  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
 `;
 
 export const Descr = styled.p`
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 28px;
   padding: 0 10px;
   color: rgba(18, 20, 23, 0.5);
   font-family: Manrope;
@@ -53,29 +69,28 @@ export const Descr = styled.p`
 `;
 export const Btn = styled.button`
   display: flex;
-  justify-content: center;
   list-style: none;
-  text-decoration: none;
-  align-items: center;
-  width: 200px;
+  min-width: 150px;
+  margin: 0px auto;
   min-height: 20px;
-  padding: 5px;
-  margin: 20px auto;
-  cursor: pointer;
-  color: white;
-  background-color: #3470ff;
-  border: 1px solid #3470ff;
-  border-radius: 6px;
-  transition: all 0.3s ease-in-out;
-  &.active {
-    background-color: #afffff;
-    color: #000000;
-  }
-  &:hover {
-    scale: 1.1;
-    color: red;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2),
-      0px 1px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 5px -1px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  width: 100px;
+  border: solid 1px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #fba003;
+  transition: all 250ms;
+
+  &:hover,
+  &:focus {
+    border: 1px solid #000000;
+    cursor: pointer;
+    transform: scale(1.1);
   }
 `;
 export const StyledHeart = styled.div`

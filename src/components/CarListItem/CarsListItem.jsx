@@ -5,6 +5,7 @@ import {
   Image,
   ImageThumb,
   Item,
+  Text,
   Paragraf,
   Span,
   StyledHeart,
@@ -19,6 +20,7 @@ import PropTypes from 'prop-types';
 
 export const CarsListItem = ({ car }) => {
   const [toggleModal, setToggleModal] = useState(false);
+console.log(toggleModal);
   const dispatch = useDispatch();
   const favoriteCars = useSelector(selectFavoritesCars);
   const handleClick = () => {
@@ -48,7 +50,7 @@ export const CarsListItem = ({ car }) => {
     type,
     address,
   } = car;
-
+console.log(favoriteCars);
   const updateaddress = address.split(', ').slice(-2).join(' | ');
   const isInFavorites = favoriteCars.some(i => i.id === id);
   return (
@@ -58,17 +60,17 @@ export const CarsListItem = ({ car }) => {
           <Image src={img} alt={model} />
         </ImageThumb>
         <Paragraf>
-          <p>
+          <Text>
             {make} <Span> {model}, </Span> {year}
-          </p>
-          <p> {rentalPrice}</p>
+          </Text>
+          <Text> {rentalPrice}</Text>
         </Paragraf>
         <Descr>
           {updateaddress} | {rentalCompany} | {make} | {id} | {type} |{' '}
           {accessories[0]} | {functionalities[0]}
         </Descr>
         <Btn id={id} onClick={handleClick}>
-          learn more
+          Learn more
         </Btn>
         <StyledHeart id={id} onClick={() => handleToogleFavorites(id)}>
           <StyledHeartIcon $isInFavorites={isInFavorites} />

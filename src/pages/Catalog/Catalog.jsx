@@ -14,13 +14,16 @@ import { CarsList } from "components/CarsList/CarsList";
 import { SearchForm } from "components/SearchForm/SearchForm";
 import { LoadMoreButton } from 'components/LoadMoreButton/LoadMoreButton';
 import { Container } from "./Catalog.styled";
-import Loader from "components/Layout/Loader";
+import Loader from "components/Loader/Loader";
+
 
 const Catalog = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
  const [initialLoad, setInitialLoad] = useState(true);
- const amount = useSelector(selectAmountCars);
+  const amount = useSelector(selectAmountCars);
+
+  console.log(amount);
  const filteredCars = useSelector(selectFilteredCars);
  const isLoading = useSelector(selectLoading);
 
@@ -31,7 +34,7 @@ const Catalog = () => {
    }
 
    if (!initialLoad) {
-     dispatch(fetchCars({ page, limit: 12 }));
+     dispatch(fetchCars({ page, limit: 8 }));
    } else {
      setInitialLoad(false); 
    }
@@ -46,8 +49,10 @@ const Catalog = () => {
       <SearchForm />
       {isLoading && <Loader />}
       {filteredCars.length > 0 && <CarsList cars={filteredCars} />}
-      {filteredCars.length === 0 && <NotFound />}
-      {!isLoading && <LoadMoreButton onClick={handleLoadMore} />}
+      {filteredCars.length === 0 && !isLoading && <NotFound />}
+      {amount !== filteredCars.length && (
+        <LoadMoreButton onClick={handleLoadMore} />
+      )}
     </Container>
   );
 };
