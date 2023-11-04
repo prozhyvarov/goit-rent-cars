@@ -2,7 +2,7 @@
   "name": "goit-rent-cars",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://prozhyvarov.github.io/goit-rent-cars/",
+  "homepage": "https://prozhyvarov.github.io/goit-rent-cars",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/jest-dom": "^5.16.3",
